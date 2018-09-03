@@ -11,7 +11,7 @@ import './styles.css';
 import Header from './Header';
 import Landing from './landing/Landing';
 import Dashboard from './dashboard/Dashboard';
-
+import EmailNew from './emails/EmailNew';
 
 class App extends Component {
 
@@ -32,6 +32,7 @@ class App extends Component {
               </div>
               <Route exact path="/" component={Landing} />
               <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/email/new" component={EmailNew} />
             </div>
         </BrowserRouter>
     );

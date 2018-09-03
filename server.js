@@ -31,7 +31,9 @@ module.exports = {texts};
 
 //User Controller and Model
 const User = require('./models/User.js');
+const Email = require('./models/Email.js');
 require('./controllers/user.js')(passport, app, User);
+require('./controllers/email.js')(app);
 
 if (process.env.NODE_ENV === 'production') {
   // Express will serve up production assets
