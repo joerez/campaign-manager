@@ -9,7 +9,8 @@ class EmailNew extends Component {
   render() {
     return (
       <div className="new-email">
-        <form action="/email/new" method="POST">
+        <form action="/api/emails/new" method="POST">
+          <input type="hidden" name="email" value={this.props.auth.email}/>
           <input placeholder="Email Subject" name="subject"/>
           <input placeholder="Body" name="body"/>
           <input placeholder="Recipients" name="recipients"/>
