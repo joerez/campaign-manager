@@ -11,6 +11,7 @@ class EmailNew extends Component {
       <div className="new-email">
         <form action="/api/emails/new" method="POST">
           <input type="hidden" name="email" value={this.props.auth.email}/>
+          <input placeholder="Campaign Title" name="title"/>
           <input placeholder="Email Subject" name="subject"/>
           <input placeholder="Body" name="body"/>
           <input placeholder="Recipients" name="recipients"/>

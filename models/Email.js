@@ -4,11 +4,12 @@ const { Schema } = mongoose;
 const emailSchema = new Schema({
   title: String,
   user: String,
-  sender: String,
-  recipients: [],
+  from: String,
+  to: String,
   subject: String,
-  body: String
+  text: String
 });
+
 
 const Email = mongoose.model('Email', emailSchema);
 
