@@ -28,6 +28,10 @@ class Dashboard extends Component {
               {email.body}
             </p>
           </div>
+          <a href={"/email/" + 'edit/' + email._id}>Edit</a>
+          <form method="POST" action={"/api/emails/delete/" + email._id + "/?_method=DELETE"}>
+            <input type="submit" value="delete" />
+          </form>
         </div>
       )
     })

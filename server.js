@@ -7,6 +7,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/campaign-manage
   console.log("Connected to Campaign-Manager Database");
 });
 
+const methodOverride = require('method-override')
+
 
 const authKeys = require('./config/keys');
 const passport = require('passport');
@@ -24,6 +26,9 @@ app.use(cookieSession({
 )
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(methodOverride('_method'))
+
 
 //Initalize the texting object
 let texts = {};

@@ -33,6 +33,7 @@ let googleStrategy = new GoogleStrategy(
       // make a new record
       let user = await new User({
         googleId: profile.id,
+        name: profile.displayName,
         email: profile.emails[0].value,
         accessToken : accessToken,
         refreshToken : refreshToken
